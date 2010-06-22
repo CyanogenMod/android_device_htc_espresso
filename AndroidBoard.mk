@@ -82,11 +82,17 @@ $(file) : $(TARGET_OUT)/usr/keychars/
 	@rm -rf $@
 	$(hide) ln -sf  $@
 
+# Prebuilt Modules
 PRODUCT_COPY_FILES += \
-$(LOCAL_PATH)/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko 
-
-PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
 $(LOCAL_PATH)/sdio.ko:system/lib/modules/sdio.ko 
+
+# Proprietary GPS
+$(LOCAL_PATH)/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
+$(LOCAL_PATH)/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_Issuer_CA_01.der \
+$(LOCAL_PATH)/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
+$(LOCAL_PATH)/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der \
+
 
 # Proprietary to-do
 PRODUCT_COPY_FILES += \
