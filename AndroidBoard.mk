@@ -242,6 +242,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/copybit.msm7k.so:system/lib/hw/copybit.msm7k.so \
     $(LOCAL_PATH)/proprietary/gralloc.default.so:system/lib/hw/gralloc.default.so \
     $(LOCAL_PATH)/proprietary/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \
-    $(LOCAL_PATH)/proprietary/sensors.espresso.so:system/lib/hw/sensors.espresso.so
-
+    $(LOCAL_PATH)/proprietary/sensors.espresso.so:system/lib/hw/sensors.espresso.so \
+    $(LOCAL_PATH)/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so
 
