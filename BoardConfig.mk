@@ -42,7 +42,7 @@ BOARD_USERDATAIMAGE_MAX_SIZE :=
 # Check accuracy of kernel base
 BOARD_KERNEL_BASE := 0x00000000
 USE_CAMERA_STUB := false
-BOARD_EGL_CFG := vendor/htc/espresso-open/egl.cfg
+BOARD_EGL_CFG := vendor/htc/espresso/egl.cfg
 
 ENABLE_ANIMATED_GIF := true
 ALLOW_LGPL := true

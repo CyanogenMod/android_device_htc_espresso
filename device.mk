@@ -1,6 +1,6 @@
 # Build configuration for AOSP on T-Mobile myTouch 3G Slide
 $(call inherit-product, build/target/product/generic.mk)
-$(call inherit-product, vendor/htc/espresso-open/device_espresso.mk)
+$(call inherit-product, vendor/htc/espresso/device_espresso.mk)
 
 PRODUCT_PACKAGES += \
     DeskClock \
@@ -22,7 +22,7 @@ PRODUCT_NAME := htc_espresso
 
 # Which actual hardware this is based on (this is a path under vendor/)
 PRODUCT_BRAND := tmobile
-PRODUCT_DEVICE := espresso-open
+PRODUCT_DEVICE := espresso
 
 # The user-visible product name
 PRODUCT_MODEL := T-Mobile myTouch 3G Slide

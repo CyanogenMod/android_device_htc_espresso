@@ -16,7 +16,7 @@
 
 # This is the list of apps included in the generic AOSP build
 
-DEVICE_PACKAGE_OVERLAYS := vendor/htc/espresso-open/overlay
+DEVICE_PACKAGE_OVERLAYS := vendor/htc/espresso/overlay
 
 PRODUCT_PROPERTY_OVERRIDES += \
 		ro.config.ringtone=Innovation.mp3 \
