@@ -41,7 +41,7 @@ USE_PV_WINDOWS_MEDIA := false
 
 # Check accuracy of kernel base
 BOARD_KERNEL_BASE := 0x12c00000
-USE_CAMERA_STUB := false
+USE_CAMERA_STUB := true
 BOARD_EGL_CFG := vendor/htc/espresso/egl.cfg
 
 ENABLE_ANIMATED_GIF := true
