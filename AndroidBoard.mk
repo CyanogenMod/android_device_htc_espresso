@@ -191,21 +191,15 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/boot_fstab | $(ACP)
 	$(transform-prebuilt-to-target)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := qwerty.kcm.bin
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := qwerty2.kcm.bin
-include $(BUILD_KEY_CHAR_MAP)
-
 # Prebuilt Modules
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
 $(LOCAL_PATH)/sdio.ko:system/lib/modules/sdio.ko 
 
-# Extra Keypad Binaries
+# Keypad Binaries
 PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+$(LOCAL_PATH)/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
 $(LOCAL_PATH)/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \
 $(LOCAL_PATH)/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \
 $(LOCAL_PATH)/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin
