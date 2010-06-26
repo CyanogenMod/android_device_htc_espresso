@@ -40,7 +40,7 @@ BOARD_USERDATAIMAGE_MAX_SIZE :=
 # BOARD_FLASH_BLOCK_SIZE := 
 
 # Check accuracy of kernel base
-BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_BASE := 0x12c00000
 USE_CAMERA_STUB := false
 BOARD_EGL_CFG := vendor/htc/espresso/egl.cfg
 
