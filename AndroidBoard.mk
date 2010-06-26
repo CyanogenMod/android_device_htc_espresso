@@ -191,17 +191,17 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/boot_fstab | $(ACP)
 	$(transform-prebuilt-to-target)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := latte-keypad-v0.kcm.bin
-include $(BUILD_KEY_CHAR_MAP)
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := latte-keypad-v0.kcm.bin
+#include $(BUILD_KEY_CHAR_MAP)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := latte-keypad-v1.kcm.bin
-include $(BUILD_KEY_CHAR_MAP)
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := latte-keypad-v1.kcm.bin
+#include $(BUILD_KEY_CHAR_MAP)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := latte-keypad-v2.kcm.bin
-include $(BUILD_KEY_CHAR_MAP)
+#include $(CLEAR_VARS)
+#LOCAL_SRC_FILES := latte-keypad-v2.kcm.bin
+#include $(BUILD_KEY_CHAR_MAP)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := qwerty.kcm.bin
