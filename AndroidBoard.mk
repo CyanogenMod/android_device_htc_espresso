@@ -218,10 +218,10 @@ $(LOCAL_PATH)/sdio.ko:system/lib/modules/sdio.ko
 
 # Proprietary GPS
 PRODUCT_COPY_FILES += \
-$(LOCAL_PATH)/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
-$(LOCAL_PATH)/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_Issuer_CA_01.der \
-$(LOCAL_PATH)/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
-$(LOCAL_PATH)/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der \
+$(LOCAL_PATH)/proprietary/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
+$(LOCAL_PATH)/proprietary/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_Issuer_CA_01.der \
+$(LOCAL_PATH)/proprietary/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
+$(LOCAL_PATH)/proprietary/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
