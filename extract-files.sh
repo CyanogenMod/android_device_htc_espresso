@@ -27,6 +27,7 @@ adb pull /system/lib/libgps.so proprietary/libgps.so
 adb pull /system/lib/libhtc_acoustic.so proprietary/libhtc_acoustic.so
 adb pull /system/lib/libhtc_ril.so proprietary/libhtc_ril.so
 adb pull /system/lib/libmm-adspsvc.so proprietary/libmm-adspsvc.so
+adb pull /system/lib/libmmclient.so proprietary/libmmclient.so
 adb pull /system/lib/libcamera.so proprietary/libcamera.so
 adb pull /system/lib/libOmxH264Dec.so proprietary/libOmxH264Dec.so
 adb pull /system/lib/libOmxMpeg4Dec.so proprietary/libOmxMpeg4Dec.so
