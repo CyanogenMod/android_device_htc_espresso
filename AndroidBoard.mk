@@ -191,18 +191,6 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/boot_fstab | $(ACP)
 	$(transform-prebuilt-to-target)
 
-#include $(CLEAR_VARS)
-#LOCAL_SRC_FILES := latte-keypad-v0.kcm.bin
-#include $(BUILD_KEY_CHAR_MAP)
-
-#include $(CLEAR_VARS)
-#LOCAL_SRC_FILES := latte-keypad-v1.kcm.bin
-#include $(BUILD_KEY_CHAR_MAP)
-
-#include $(CLEAR_VARS)
-#LOCAL_SRC_FILES := latte-keypad-v2.kcm.bin
-#include $(BUILD_KEY_CHAR_MAP)
-
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := qwerty.kcm.bin
 include $(BUILD_KEY_CHAR_MAP)
@@ -216,6 +204,12 @@ PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
 $(LOCAL_PATH)/sdio.ko:system/lib/modules/sdio.ko 
 
+# Extra Keypad Binaries
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \
+$(LOCAL_PATH)/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \
+$(LOCAL_PATH)/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin
+
 # Proprietary GPS
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/proprietary/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
@@ -223,6 +217,8 @@ $(LOCAL_PATH)/proprietary/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_
 $(LOCAL_PATH)/proprietary/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
 $(LOCAL_PATH)/proprietary/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der \
 
+# Proprietary
+# See README on how to get the proprietary pack
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     $(LOCAL_PATH)/proprietary/libGLES_android.so:system/lib/egl/libEGL_adreno200.so \
