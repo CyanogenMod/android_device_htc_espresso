@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_NAME := htc_espresso
 
 # Which actual hardware this is based on (this is a path under vendor/)
-PRODUCT_BRAND := tmobile
+PRODUCT_BRAND := htc
 PRODUCT_DEVICE := espresso
 
 # The user-visible product name
