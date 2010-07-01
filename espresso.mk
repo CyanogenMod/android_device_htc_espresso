@@ -123,3 +123,6 @@ $(call inherit-product, device/htc/common/common.mk)
 
 PRODUCT_NAME := generic_espresso
 PRODUCT_DEVICE := espresso
+PRODUCT_BRAND := HTC
+PRODUCT_NAME := generic_espresso
+PRODUCT_DEVICE := espresso
