@@ -121,7 +121,7 @@ $(call inherit-product, device/htc/espresso/media_a1026.mk)
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
 
+$(call inherit-product, build/target/product/generic.mk)
+
 PRODUCT_NAME := generic_espresso
 PRODUCT_DEVICE := espresso
-PRODUCT_BRAND := HTC
-PRODUCT_POLICY := android.policy_phone
