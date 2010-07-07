@@ -122,7 +122,10 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/gralloc.default.so:system/lib/hw/gralloc.default.so \\
     vendor/htc/__DEVICE__/proprietary/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \\
     vendor/htc/__DEVICE__/proprietary/sensors.espresso.so:system/lib/hw/sensors.espresso.so \\
-    vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so
+    vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so \\
+    device/htc/__DEVICE__/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \\
+    device/htc/__DEVICE__/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \\
+    device/htc/__DEVICE__/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin
 
 EOF
 

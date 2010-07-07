@@ -80,6 +80,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += device/htc/espresso/overlay
 
 PRODUCT_COPY_FILES += \
+    device/htc/espresso/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \
+    device/htc/espresso/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \
+    device/htc/espresso/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl
+
+PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
