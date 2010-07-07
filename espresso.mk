@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/init.espresso.rc:root/init.espresso.rc
+    device/htc/espresso/init.latte.rc:root/init.latte.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
