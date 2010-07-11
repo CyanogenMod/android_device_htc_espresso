@@ -54,7 +54,7 @@ BOARD_KERNEL_BASE := 0x12c00000
 
 BOARD_HAVE_BLUETOOTH := true
 
-# BOARD_NO_CACHED_BUFFERS := true
+BOARD_NO_CACHED_BUFFERS := true
 
 BOARD_EGL_CFG := device/htc/espresso/egl.cfg
 
