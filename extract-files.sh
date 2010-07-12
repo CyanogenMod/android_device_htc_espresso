@@ -59,6 +59,12 @@ adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/prop
 adb pull /system/lib/hw/copybit.msm7k.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/sensors.espresso.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/lights.msm7k.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keychars/latte-keypad-v0.kcm.bin ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keychars/latte-keypad-v1.kcm.bin ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keychars/latte-keypad-v2.kcm.bin ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keylayout/latte-keypad-v0.kl ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keylayout/latte-keypad-v1.kl ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/usr/keylayout/latte-keypad-v2.kl ../../../vendor/htc/$DEVICE/proprietary
 
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
@@ -122,10 +128,12 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/copybit.msm7k.so:system/lib/hw/copybit.msm7k.so \\
     vendor/htc/__DEVICE__/proprietary/sensors.espresso.so:system/lib/hw/sensors.espresso.so \\
     vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so \\
-#    vendor/htc/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
-    device/htc/__DEVICE__/proprietary/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \\
-    device/htc/__DEVICE__/proprietary/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \\
-    device/htc/__DEVICE__/proprietary/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \\
+    vendor/htc/__DEVICE__/proprietary/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl
 
 EOF
 
