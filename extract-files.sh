@@ -22,50 +22,45 @@ mkdir -p ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/gralloc.msm7k.so ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary/akmd
-chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
 adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/wl1271.bin ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPara4_WB.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/$DEVICE/proprietary
-
-adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLES_android.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-
-adb pull /system/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/pvasflocal.cfg ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/T-Mobile_USA_Intermediate_CA_01.der ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/T-Mobile_USA_Issuer_CA_01.der ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/T-Mobile_USA_Issuer_CA_02.der ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/T-Mobile_USA_Root_CA.der ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/firmware/wl1271.bin ../../../vendor/htc/$DEVICE/proprietary
 
 adb pull /system/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libmm-adspsvc.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libmmclient.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxH264Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libspeech.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary
-
-adb pull /system/etc/pvasflocal.cfg ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libomx_wmadec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasfcommon.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasflocalpb.so ../../../vendor/htc/$DEVICE/proprietary
-
+adb pull /system/lib/libspeech.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/egl/libGLES_android.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/copybit.msm7k.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/sensors.espresso.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/hw/lights.msm7k.so ../../../vendor/htc/$DEVICE/proprietary
 
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
