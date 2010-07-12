@@ -123,15 +123,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/copybit.msm7k.so:system/lib/hw/copybit.msm7k.so \\
     vendor/htc/__DEVICE__/proprietary/sensors.espresso.so:system/lib/hw/sensors.espresso.so \\
     vendor/htc/__DEVICE__/proprietary/lights.msm7k.so:system/lib/hw/lights.msm7k.so \\
-    device/htc/__DEVICE__/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \\
-    device/htc/__DEVICE__/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \\
-    device/htc/__DEVICE__/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \\
-    device/htc/__DEVICE__/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \\
-    device/htc/__DEVICE__/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \\
-    device/htc/__DEVICE__/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl \\
-    device/htc/__DEVICE__/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \\
-    device/htc/__DEVICE__/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \\
-    device/htc/__DEVICE__/qwerty.kl:system/usr/keylayout/qwerty.kl \\
     vendor/htc/__DEVICE__/proprietary/curcial-oj.kl:system/usr/keylayout/curcial-oj.kl
 
 EOF

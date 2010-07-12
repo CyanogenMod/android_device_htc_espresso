@@ -27,6 +27,17 @@ endif # TARGET_PREBUILT_KERNEL
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
+    device/htc/espresso/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \
+    device/htc/espresso/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \
+    device/htc/espresso/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl \
+    device/htc/espresso/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \
+    device/htc/espresso/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \
+    device/htc/espresso/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \
+    device/htc/espresso/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/htc/espresso/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/espresso/qwerty.kl:system/usr/keylayout/qwerty.kl
+
+PRODUCT_COPY_FILES += \
     device/htc/espresso/init.latte.rc:root/init.latte.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
