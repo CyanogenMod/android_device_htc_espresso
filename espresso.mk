@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-# Proprietary pack can be downloaded from: www.bit.ly/wesaspin#280
-
 ## Inherit from the following products.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
