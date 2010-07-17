@@ -39,8 +39,8 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>200</item>
-        <item>400</item>
         <item>1000</item>
+        <item>2000</item>
         <item>3000</item>
     </integer-array>
 
