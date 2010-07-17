@@ -1,7 +1,7 @@
 key 116   POWER             WAKE_DROPPED
 key 107   ENDCALL           WAKE_DROPPED
 
-Add DPAD_CENTER key [untested]
+key 272   DPAD_CENTER       WAKE_DROPPED
 
 # column 0
 key 16    Q                 WAKE_DROPPED
