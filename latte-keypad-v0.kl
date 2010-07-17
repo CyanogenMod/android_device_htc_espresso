@@ -61,7 +61,7 @@ key 33    F                 WAKE_DROPPED
 key 42    SHIFT_LEFT        WAKE_DROPPED
 key 50    M                 WAKE_DROPPED
 key 57    SPACE             WAKE_DROPPED
-key 139   MENU
+key 139   MENU		    WAKE_DROPPED
 key 158   BACK
 
 # column 7
