@@ -21,7 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB := false
 
 # inherit from the proprietary version
 -include vendor/htc/espresso/BoardConfigVendor.mk
