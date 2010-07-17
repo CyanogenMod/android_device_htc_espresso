@@ -52,8 +52,7 @@ key 32    D                 WAKE_DROPPED
 key 33    F                 WAKE_DROPPED
 key 49    N                 WAKE_DROPPED
 key 139   MENU
-#
-key 187   FUNC_4
+key 187   SEARCH
 
 # column 6
 key 30    A                 WAKE_DROPPED
