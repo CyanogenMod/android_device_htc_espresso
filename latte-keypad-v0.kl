@@ -53,7 +53,7 @@ key 14    DEL               WAKE_DROPPED
 key 49    N                 WAKE_DROPPED
 key 184   FUNC_2            WAKE_DROPPED
 key 232   DPAD_CENTER       WAKE_DROPPED
-key 187   FUNC_4
+key 187   SEARCH
 
 # column 6
 key 22    U                 WAKE_DROPPED
