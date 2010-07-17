@@ -46,8 +46,7 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "tiwlan_drv"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
-
--include hardware/ti/wlan/wl1271/Android.mk
+-$include hardware/ti/wlan/wl1271/Android.mk
 
 BOARD_USES_GENERIC_AUDIO := false
 
