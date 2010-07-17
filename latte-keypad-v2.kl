@@ -16,7 +16,7 @@ key 24    O                 WAKE_DROPPED
 key 35    H                 WAKE_DROPPED
 key 45    X                 WAKE_DROPPED
 key 102   HOME
-#key 183   FUNC_1            WAKE_DROPPED
+key 183   FUNC_1            WAKE_DROPPED
 key 15    TAB               WAKE_DROPPED
 
 # column 2
@@ -33,7 +33,7 @@ key 19    R                 WAKE_DROPPED
 key 25    P                 WAKE_DROPPED
 key 38    L                 WAKE_DROPPED
 key 47    V                 WAKE_DROPPED
-#key 214   QUECHAR           WAKE_DROPPED
+key 214   QUECHAR           WAKE_DROPPED
 key 184   BACK              WAKE_DROPPED
 key 115   VOLUME_UP         WAKE
 
