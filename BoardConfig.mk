@@ -21,7 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB := false
 
 # inherit from the proprietary version
 -include vendor/htc/espresso/BoardConfigVendor.mk
@@ -51,6 +51,8 @@ BOARD_USES_GENERIC_AUDIO := false
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12c00000
+
+BOARD_HAVE_BLUETOOTH := true
 
 # BOARD_NO_CACHED_BUFFERS := true
 
