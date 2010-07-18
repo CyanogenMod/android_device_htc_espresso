@@ -107,8 +107,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/espresso/gps.conf:system/etc/gps.conf
 
+# Prebuilt Modules
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
+    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
+    device/htc/espresso/sdio.ko:system/lib/modules/sdio.ko
 
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
