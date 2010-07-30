@@ -24,6 +24,8 @@ TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
 
+DEVICE_PACKAGE_OVERLAYS := device/htc/espresso/overlay
+
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
@@ -90,8 +92,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.bt.name=Android \
     ro.config.sync=yes \
     dalvik.vm.stack-trace-file=/data/anr/traces.txt
-
-DEVICE_PACKAGE_OVERLAYS += device/htc/espresso/overlay
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
