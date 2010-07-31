@@ -21,7 +21,7 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-USE_CAMERA_STUB := false
+USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
 -include vendor/htc/espresso/BoardConfigVendor.mk
@@ -39,15 +39,15 @@ TARGET_BOOTLOADER_BOARD_NAME := espresso
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
-BOARD_WLAN_DEVICE := tiwlan0
-BOARD_WLAN_TI_STA_DK_ROOT := system/wlan/ti/wilink_6_1
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libWifiApi
+BOARD_WLAN_DEVICE := wl1271
+BOARD_WLAN_TI_STA_DK_ROOT := ystem/wlan/ti/sta_dk_4_0_4_32
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "tiwlan_drv"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
-BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_GENERIC_AUDIO := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12c00000
