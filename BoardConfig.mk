@@ -39,7 +39,7 @@ TARGET_BOOTLOADER_BOARD_NAME := espresso
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libWifiApi
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
 BOARD_WLAN_DEVICE := wl1271
 #BOARD_WLAN_TI_STA_DK_ROOT := system/wlan/ti/sta_dk_4_0_4_32
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
