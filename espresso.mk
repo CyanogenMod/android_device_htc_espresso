@@ -18,15 +18,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Kernel Targets
-#ifeq ($(TARGET_PREBUILT_KERNEL),)
-#ifeq ($(TARGET_KERNEL_CONFIG),)
-#TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+ifeq ($(TARGET_KERNEL_CONFIG),)
+TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
 # Prebuilt Modules
-#PRODUCT_COPY_FILES += \
-#    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-#    device/htc/espresso/sdio.ko:system/lib/modules/sdio.ko
-#endif # TARGET_KERNEL_CONFIG
-#endif # TARGET_PREBUILT_KERNEL
+PRODUCT_COPY_FILES += \
+    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
+    device/htc/espresso/sdio.ko:system/lib/modules/sdio.ko
+endif # TARGET_KERNEL_CONFIG
+endif # TARGET_PREBUILT_KERNEL
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/espresso/overlay
 
@@ -116,11 +116,6 @@ PRODUCT_COPY_FILES += \
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
     device/htc/espresso/gps.conf:system/etc/gps.conf
-
-# Prebuilt Modules
-PRODUCT_COPY_FILES += \
-    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-    device/htc/espresso/sdio.ko:system/lib/modules/sdio.ko
 
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
