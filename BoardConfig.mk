@@ -41,11 +41,13 @@ TARGET_BOOTLOADER_BOARD_NAME := espresso
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
 BOARD_WLAN_DEVICE := wl1271
+TARGET_BOARD_WLAN_DEVICE := wl1271
 #BOARD_WLAN_TI_STA_DK_ROOT := system/wlan/ti/sta_dk_4_0_4_32
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
+WIFI_DRIVER_MODULE_PATH     := "system/lib/modules/tiwlan_drv.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "tiwlan_drv"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
+-include hardware/ti/wlan/wl1271/Android.mk
 
 BOARD_USES_GENERIC_AUDIO := false
 
