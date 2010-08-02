@@ -109,7 +109,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    sensors.espresso
+    sensors.espresso \
+    lights.espresso
 
 PRODUCT_COPY_FILES += \
     device/htc/espresso/vold.fstab:system/etc/vold.fstab
