@@ -50,7 +50,7 @@ service akmd /system/bin/akmd
     user compass
     group compass misc input
 
-service wlan_loader /system/bin/tiwlan_loader \
+service wlan_loader /system/bin/wlan_loader \
     -f /system/etc/wifi/Fw1273_CHIP.bin -e /proc/calibration \
     -i /system/etc/wifi/tiwlan.ini
     disabled
