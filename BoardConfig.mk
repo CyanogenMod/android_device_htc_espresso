@@ -63,6 +63,8 @@ BOARD_VENDOR_USE_AKMD := akm8973
 
 BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
 
+BOARD_USES_QCOM_LIBS := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
