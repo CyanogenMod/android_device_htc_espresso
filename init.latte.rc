@@ -5,12 +5,6 @@ on early-init
   write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
   write /sys/devices/virtual/net/rmnet0/timeout 18000000
 
-on init
-# btips DDB location
-    mkdir /data/btips 0777 bluetooth bluetooth
-    mkdir /data/btips/TI 0777 bluetooth bluetooth
-    mkdir /data/btips/TI/opp 0777 bluetooth bluetooth
-
 on boot
 # unmap left alt to avoid console switch
     setkey 0x0 0x38 0x0
@@ -43,10 +37,6 @@ on boot
     # set CABC permissions
     chown system system /sys/class/leds/lcd-backlight/auto
 
-    # set all crashes to bin in /data/btips with a descriptive core filename
-    # DEBUG
-    write /proc/sys/kernel/core_pattern /data/btips/core_%e_p_%p_s_%s_t_%t
-
     # for Espresso VoiceCommand
     mkdir -p /data/local/tmp/com.nuance.android.vsuite.vsuiteapp
     chmod 0777 /data/local/tmp/com.nuance.android.vsuite.vsuiteapp
@@ -54,9 +44,6 @@ on boot
     # for playing streaming
     chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
-# Enable low memory killer to check file pages
-    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
-    write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
@@ -66,10 +53,6 @@ service akmd /system/bin/akmd
 service wlan_loader /system/bin/tiwlan_loader \
     -f /system/etc/wifi/Fw1273_CHIP.bin -e /proc/calibration \
     -i /system/etc/wifi/tiwlan.ini
-    disabled
-    oneshot
-
-service ifcfg_up /system/bin/ifconfig tiwlan0 up
     disabled
     oneshot
 
@@ -89,34 +72,9 @@ service hciattach /system/bin/hciattach \
     group bluetooth net_bt_admin
     disabled
 
-#btips - 2.22
-service btips /system/bin/btipsd --logfile /data/btips/btips_log.txt -no_android_log
-    socket bluetooth stream 660 bluetooth bluetooth
-    socket dbus_bluetooth stream 660 bluetooth bluetooth
-    group bluetooth net_bt_admin misc
-    disabled
-    oneshot
-
 # bugreport is triggered by the KEY_BACK and KEY_MENU keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
     keycodes 158 139
-
-service udhcpd /system/bin/udhcpd
-	disabled
-	oneshot
-
-service netsharing_on /system/bin/netsharing net on
-	disabled
-	oneshot
-
-service netsharing_off /system/bin/netsharing net off
-	disabled
-	oneshot
-
-service dmagent /system/bin/dmagent -N
-    socket dmagent stream 660 root radio
-    user root
-    group radio cache inet misc
 
