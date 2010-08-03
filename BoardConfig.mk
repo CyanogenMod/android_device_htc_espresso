@@ -37,6 +37,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv5te-vfp
 
 TARGET_BOOTLOADER_BOARD_NAME := espresso
+TARGET_OTA_ASSERT_DEVICE := espresso
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
