@@ -76,6 +76,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.phone_storage = 0
 
+# This is a 512MB device, so 32mb heapsize
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=32m
+
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
