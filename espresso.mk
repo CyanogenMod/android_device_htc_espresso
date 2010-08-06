@@ -123,6 +123,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/espresso/gps.conf:system/etc/gps.conf
 
+# Prebuilt kernel modules
+PRODUCT_COPY_FILES += \
+    device/htc/espresso/sdio.ko:/system/lib/modules/sdio.ko \
+    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko
+
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
 # media profiles and capabilities spec
