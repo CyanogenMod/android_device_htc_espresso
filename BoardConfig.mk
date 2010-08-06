@@ -39,7 +39,6 @@ TARGET_ARCH_VARIANT := armv5te-vfp
 TARGET_BOOTLOADER_BOARD_NAME := espresso
 
 # Wifi related defines
-WPA_SUPPLICANT_VERSION      := VER_0_6_X
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
 BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/wilink_6_1
@@ -65,6 +64,8 @@ BOARD_VENDOR_USE_AKMD := akm8973
 BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
 
 BOARD_USES_QCOM_LIBS := true
+
+BOARD_USES_ECLAIR_LIBCAMERA := true
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
