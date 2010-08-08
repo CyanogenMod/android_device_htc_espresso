@@ -73,9 +73,9 @@
     <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>255</item>
         <item>255</item>
-        <item>4294967295</item>
-        <item>0</item>
-        <item>0</item>
+        <item>255</item>
+        <item>255</item>
+        <item>225</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -91,9 +91,9 @@
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
         <item>255</item>
         <item>255</item>
-        <item>4294967295</item>
-        <item>0</item>
-        <item>0</item>
+        <item>255</item>
+        <item>255</item>
+        <item>255</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
