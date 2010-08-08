@@ -34,6 +34,18 @@ on boot
     chown bluetooth bluetooth sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
 
+    # Permissions for Liblights.
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/brightness
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/amber/brightness
+    chown system system /sys/class/leds/amber/blink
+    chown system system /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/keyboard-backlight/brightness
+    chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
     # set CABC permissions
     chown system system /sys/class/leds/lcd-backlight/auto
 
