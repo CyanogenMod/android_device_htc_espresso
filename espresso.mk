@@ -21,10 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(TARGET_KERNEL_CONFIG),)
 TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
-# Prebuilt Modules
-PRODUCT_COPY_FILES += \
-    device/htc/espresso/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-    device/htc/espresso/sdio.ko:system/lib/modules/sdio.ko
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
 
@@ -126,7 +122,8 @@ PRODUCT_COPY_FILES += \
 # Prebuilt kernel modules
 PRODUCT_COPY_FILES += \
     device/htc/espresso/sdio.ko:/system/lib/modules/sdio.ko \
-    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko
+    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
+    device/htc/espresso/aufs.ko:/system/lib/modules/aufs.ko
 
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
