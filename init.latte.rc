@@ -5,6 +5,17 @@ on early-init
   write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
   write /sys/devices/virtual/net/rmnet0/timeout 18000000
 
+# Define the memory thresholds at which the above process classes will
+# be killed.  These numbers are in pages (4k).
+    setprop ro.FOREGROUND_APP_MEM 3584
+    setprop ro.VISIBLE_APP_MEM 4096
+    setprop ro.SECONDARY_SERVER_MEM 6144
+    setprop ro.BACKUP_APP_MEM 6144
+    setprop ro.HOME_APP_MEM 6144
+    setprop ro.HIDDEN_APP_MEM 7168
+    setprop ro.CONTENT_PROVIDER_MEM 7680
+    setprop ro.EMPTY_APP_MEM 8192
+
 on boot
 # unmap left alt to avoid console switch
     setkey 0x0 0x38 0x0
@@ -56,6 +67,12 @@ on boot
     # for playing streaming
     chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
+# Overwrite framework low memory killer minfree setting
+    write /sys/module/lowmemorykiller/parameters/minfree 3584,4096,6144,7168,7680,8192
+
+# Enable low memory killer to check file pages
+    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
+    write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
