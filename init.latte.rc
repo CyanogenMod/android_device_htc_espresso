@@ -49,6 +49,9 @@ on boot
     # set CABC permissions
     chown system system /sys/class/leds/lcd-backlight/auto
 
+    # flashlight
+    chown system system /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+
     # for Espresso VoiceCommand
     mkdir -p /data/local/tmp/com.nuance.android.vsuite.vsuiteapp
     chmod 0777 /data/local/tmp/com.nuance.android.vsuite.vsuiteapp
