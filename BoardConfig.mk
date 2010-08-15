@@ -67,6 +67,9 @@ BOARD_USES_QCOM_LIBS := true
 
 BOARD_USES_ECLAIR_LIBCAMERA := true
 
+# For HTC's USB implementation
+BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
