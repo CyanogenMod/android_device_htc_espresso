@@ -59,6 +59,8 @@ on boot
     # for playing streaming
     chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
+    # disable Stagefright player on Espresso
+    setprop media.stagefright.enable-player false
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
