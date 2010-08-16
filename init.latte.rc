@@ -50,7 +50,8 @@ on boot
     chown system system /sys/class/leds/lcd-backlight/auto
 
     # flashlight
-    chown system system /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+    chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+    chmod 0660          /sys/devices/platform/flashlight.0/leds/flashlight/brightness
 
     # for Espresso VoiceCommand
     mkdir -p /data/local/tmp/com.nuance.android.vsuite.vsuiteapp
