@@ -17,13 +17,6 @@
 ## Inherit from the following products.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Kernel Targets
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-ifeq ($(TARGET_KERNEL_CONFIG),)
-TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
-endif # TARGET_KERNEL_CONFIG
-endif # TARGET_PREBUILT_KERNEL
-
 DEVICE_PACKAGE_OVERLAYS := device/htc/espresso/overlay
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
@@ -124,6 +117,15 @@ PRODUCT_COPY_FILES += \
     device/htc/espresso/sdio.ko:/system/lib/modules/sdio.ko \
     device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
     device/htc/espresso/aufs.ko:/system/lib/modules/aufs.ko
+
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/htc/espresso/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
 
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 

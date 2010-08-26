@@ -90,3 +90,4 @@ TARGET_RECOVERY_UI_LIB := librecovery_ui_espresso librecovery_ui_generic
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
+TARGET_PREBUILT_KERNEL := device/htc/espresso/kernel
