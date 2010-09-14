@@ -109,8 +109,7 @@ PRODUCT_COPY_FILES += \
     device/htc/espresso/vold.fstab:system/etc/vold.fstab
 
 # The gps config appropriate for this device
-PRODUCT_COPY_FILES += \
-    device/htc/espresso/gps.conf:system/etc/gps.conf
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # Prebuilt kernel modules
 PRODUCT_COPY_FILES += \
