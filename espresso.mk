@@ -37,10 +37,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
-    ro.ril.gprsclass = 12 \
-    ro.ril.enable.dtm=0 \
-    ro.ril.hsdpa.category=8 \
-    ro.ril.hsupa.category=5 \
+    ro.ril.gprsclass = 10 \
     ro.ril.hsxpa=2 \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
     wifi.interface = tiwlan0 \
