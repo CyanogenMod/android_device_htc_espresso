@@ -42,7 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
     wifi.interface = tiwlan0 \
     wifi.supplicant_scan_interval = 15 \
-    ro.sf.lcd_density = 160
+    ro.sf.lcd_density = 160 \
+    ro.opengles.version=131072
 
 # Default network type.
 # 0 => WCDMA preferred.
