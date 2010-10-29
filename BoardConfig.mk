@@ -27,6 +27,7 @@ USE_CAMERA_STUB := true
 -include vendor/htc/espresso/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RECOVERY := true
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
