@@ -34,7 +34,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 # ARMv6-compatible processor rev 5 (v6l)
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_VARIANT := armv5te-vfp
+TARGET_ARCH_VARIANT := armv6-vfp
 
 TARGET_BOOTLOADER_BOARD_NAME := espresso
 
