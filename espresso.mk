@@ -52,8 +52,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # For the agps default value
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.def.agps.mode = 1 \
-    ro.ril.def.agps.feature=1
+    ro.ril.def.agps.mode = 2 
 
 # For 7227 projects, default enable AMR-Wideband
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -112,8 +111,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Prebuilt kernel modules
 PRODUCT_COPY_FILES += \
     device/htc/espresso/sdio.ko:/system/lib/modules/sdio.ko \
-    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
-    device/htc/espresso/aufs.ko:/system/lib/modules/aufs.ko
+    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/espresso/kernel
