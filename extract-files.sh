@@ -48,7 +48,6 @@ adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/htc/$DEVICE/proprieta
 adb pull /system/lib/libpvasflocalpb.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libspeech.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLES_android.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 
@@ -86,7 +85,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
     vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/libGLES_android.so:system/lib/egl/libGLES_android.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libgps.so:system/lib/libgps.so \\

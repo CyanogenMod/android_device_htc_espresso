@@ -65,10 +65,10 @@ BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
 
 BOARD_USES_QCOM_LIBS := true
 
-BOARD_USES_ECLAIR_LIBCAMERA := true
-
 # For HTC's USB implementation
 BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
+
+BOARD_USE_NASTY_PTHREAD_CREATE_HACK=true
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
