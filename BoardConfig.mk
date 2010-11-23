@@ -70,6 +70,8 @@ BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
 BOARD_USE_NASTY_PTHREAD_CREATE_HACK=true
 
+BOARD_USE_NEW_LIBRIL_HTC := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
