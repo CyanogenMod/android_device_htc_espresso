@@ -122,6 +122,9 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+PRODUCT_COPY_FILES += \
+    device/htc/espresso/prebuilt/gralloc.msm7k.so:/system/lib/hw/gralloc.msm7k.so
+
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
 # media profiles and capabilities spec
