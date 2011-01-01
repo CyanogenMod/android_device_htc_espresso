@@ -1,26 +1,5 @@
-on early-init
-    device mtd@misc 0460 radio diag
-
-# Set timeout value for rmnet stats.
-  write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
-  write /sys/devices/virtual/net/rmnet0/timeout 18000000
-
 on boot
-# unmap left alt to avoid console switch
-    setkey 0x0 0x38 0x0
-# espresso reset SEND+MENU+END
-    setkey 0x0 0xe7 0x706
-    setkey 0x0 0x8b 0x707
-
-    setkey 0x40 0xe7 0x706
-    setkey 0x40 0x8b 0x707
-
-    setkey 0x80 0xe7 0x706
-    setkey 0x80 0x8b 0x707
-
-    setkey 0xc0 0xe7 0x706
-    setkey 0xc0 0x8b 0x707
-    setkey 0xc0 0x6b 0x20c
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
 
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi

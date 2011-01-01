@@ -15,26 +15,33 @@
 #
 
 ## Inherit from the following products.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+# stuff common to all HTC phones
+$(call inherit-product, device/htc/common/common.mk)
+
+# stuff common to all Android phones
+$(call inherit-product, build/target/product/full_base.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/espresso/overlay
 
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
+# Keychars / Keylayout
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \
-    device/htc/espresso/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \
-    device/htc/espresso/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl \
-    device/htc/espresso/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \
-    device/htc/espresso/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \
-    device/htc/espresso/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \
-    device/htc/espresso/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
-    device/htc/espresso/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
-    device/htc/espresso/qwerty.kl:system/usr/keylayout/qwerty.kl
+    device/htc/espresso/keylayout/latte-keypad-v0.kl:system/usr/keylayout/latte-keypad-v0.kl \
+    device/htc/espresso/keylayout/latte-keypad-v1.kl:system/usr/keylayout/latte-keypad-v1.kl \
+    device/htc/espresso/keylayout/latte-keypad-v2.kl:system/usr/keylayout/latte-keypad-v2.kl \
+    device/htc/espresso/keychars/latte-keypad-v0.kcm.bin:system/usr/keychars/latte-keypad-v0.kcm.bin \
+    device/htc/espresso/keychars/latte-keypad-v1.kcm.bin:system/usr/keychars/latte-keypad-v1.kcm.bin \
+    device/htc/espresso/keychars/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \
+    device/htc/espresso/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/htc/espresso/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/espresso/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/init.latte.rc:root/init.latte.rc
+    device/htc/espresso/init.latte.rc:root/init.latte.rc \
+    device/htc/espresso/ueventd.latte.rc:root/ueventd.latte.rc
 
+# GSM Overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
     ro.ril.gprsclass = 10 \
@@ -71,22 +78,17 @@ $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.error.receiver.system.apps=com.google.android.feedback \
-    ro.setupwizard.enterprise_mode=1 \
-    ro.com.google.clientidbase=android-tmobile-{country} \
+    ro.com.google.clientidbase=android-tmobile-us \
+    ro.com.google.clientidbase.vs=android-hms-tmobile-us \
+    ro.com.google.clientidbase.ms=android-hms-tmobile-us \
     ro.com.google.locationfeatures=1 \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.setupwizard.mode=OPTIONAL \
+    ro.com.google.networklocation=1 \
     ro.setupwizard.enable_bypass=1 \
     ro.media.dec.aud.wma.enabled=1 \
     ro.media.dec.vid.wmv.enabled=1 \
-    dalvik.vm.dexopt-flags=m=y \
-    net.bt.name=Android \
-    ro.config.sync=yes \
-    dalvik.vm.stack-trace-file=/data/anr/traces.txt
+    dalvik.vm.dexopt-flags=m=y
 
+# Capabilities
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -95,47 +97,52 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
+    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
 
+# Packages
 PRODUCT_PACKAGES += \
     librs_jni \
-    sensors.espresso \
-    lights.espresso
+    lights.latte \
+    gralloc.msm7k \
+    libOmxCore \
+    copybit.msm7k \
+    sensors.latte \
+    gps.liberty
 
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/vold.fstab:system/etc/vold.fstab
+    device/htc/espresso/vold.fstab:system/etc/vold.fstab \
+    vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
-# Prebuilt kernel modules
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/sdio.ko:/system/lib/modules/sdio.ko \
-    device/htc/espresso/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko
+    device/htc/espresso/gps.conf:system/etc/gps.conf
+# GPS Certificates
+PRODUCT_COPY_FILES += \
+    device/htc/espresso/certs/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
+    device/htc/espresso/certs/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_Issuer_CA_01.der \
+    device/htc/espresso/certs/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
+    device/htc/espresso/certs/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der
 
+# Kernel Target
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/espresso/kernel
+LOCAL_KERNEL := device/htc/espresso/prebuilt/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Prebuilt kernel modules
 PRODUCT_COPY_FILES += \
-    device/htc/espresso/prebuilt/gralloc.msm7k.so:/system/lib/hw/gralloc.msm7k.so
-
-$(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
+    device/htc/espresso/prebuilt/sdio.ko:/system/lib/modules/sdio.ko \
+    device/htc/espresso/prebuilt/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
+    device/htc/espresso/prebuilt/cifs.ko:/system/lib/modules/2.6.29.6-cyanogenmod/kernel/fs/cifs/cifs.ko \
+    device/htc/espresso/prebuilt/nfs.ko:/system/lib/modules/2.6.29.6-cyanogenmod/kernel/fs/cifs/nfs.ko
 
 # media profiles and capabilities spec
 PRODUCT_COPY_FILES += \
     device/htc/espresso/media_profiles.xml:system/etc/media_profiles.xml
 $(call inherit-product, device/htc/espresso/media_a1026.mk)
-
-# stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
-
-$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := generic_espresso
 PRODUCT_DEVICE := espresso
