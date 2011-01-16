@@ -24,11 +24,11 @@ adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPara4_WB.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/pvasflocal.cfg ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/wl1271.bin ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/yamato_pm4.fw ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/firmware/yamato_pfp.fw ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/wifi/Fw1273_CHIP.bin ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/etc/wifi/Fw1273_CHIP_AP.bin ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
@@ -41,12 +41,6 @@ adb pull /system/lib/libmmclient.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxH264Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libomx_wmadec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libpvasfcommon.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libpvasflocalpb.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libspeech.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
@@ -80,6 +74,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
     vendor/htc/__DEVICE__/proprietary/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \\
     vendor/htc/__DEVICE__/proprietary/Fw1273_CHIP.bin:system/etc/wifi/Fw1273_CHIP.bin \\
+    vendor/htc/__DEVICE__/proprietary/Fw1273_CHIP_AP.bin:system/etc/wifi/Fw1273_CHIP_AP.bin \\
     vendor/htc/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
@@ -98,14 +93,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
-    vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    vendor/htc/__DEVICE__/proprietary/libspeech.so:system/lib/libspeech.so \\
-    vendor/htc/__DEVICE__/proprietary/pvasflocal.cfg:system/etc/pvasflocal.cfg \\
-    vendor/htc/__DEVICE__/proprietary/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
-    vendor/htc/__DEVICE__/proprietary/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
-    vendor/htc/__DEVICE__/proprietary/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
-    vendor/htc/__DEVICE__/proprietary/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \\
-    vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:system/lib/libpvasflocalpb.so
+    vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so
 
 EOF
 
