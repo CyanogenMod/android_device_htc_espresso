@@ -125,12 +125,6 @@ PRODUCT_COPY_FILES += \
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
     device/htc/espresso/gps.conf:system/etc/gps.conf
-# GPS Certificates
-PRODUCT_COPY_FILES += \
-    device/htc/espresso/certs/T-Mobile_USA_Intermediate_CA_01.der:system/etc/T-Mobile_USA_Intermediate_CA_01.der \
-    device/htc/espresso/certs/T-Mobile_USA_Issuer_CA_01.der:system/etc/T-Mobile_USA_Issuer_CA_01.der \
-    device/htc/espresso/certs/T-Mobile_USA_Issuer_CA_02.der:system/etc/T-Mobile_USA_Issuer_CA_02.der \
-    device/htc/espresso/certs/T-Mobile_USA_Root_CA.der:system/etc/T-Mobile_USA_Root_CA.der
 
 # Kernel Target
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -145,8 +139,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/espresso/prebuilt/sdio.ko:/system/lib/modules/sdio.ko \
     device/htc/espresso/prebuilt/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
-    device/htc/espresso/prebuilt/cifs.ko:/system/lib/modules/2.6.29.6-cyanogenmod/kernel/fs/cifs/cifs.ko \
-    device/htc/espresso/prebuilt/nfs.ko:/system/lib/modules/2.6.29.6-cyanogenmod/kernel/fs/cifs/nfs.ko
+	device/htc/espresso/prebuilt/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
+    device/htc/espresso/prebuilt/cifs.ko:/system/lib/modules/cifs.ko
 
 # media profiles and capabilities spec
 PRODUCT_COPY_FILES += \
