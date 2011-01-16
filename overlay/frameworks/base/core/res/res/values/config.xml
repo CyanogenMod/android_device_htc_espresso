@@ -160,4 +160,7 @@ tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the arra
         <item>30</item>
     </integer-array>
 
+    <!-- Enable use of power animations -->
+    <bool name="config_animateScreenLights">false</bool>
+
 </resources>
