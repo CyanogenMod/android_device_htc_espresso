@@ -73,6 +73,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m
 
+# Enable TI HotSpot
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.hotspot.ti=1
+
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
 
@@ -118,6 +122,14 @@ PRODUCT_PACKAGES += \
     wlan_loader \
     libCustomWifi
 
+# HotSpot
+PRODUCT_PACKAGES += \
+    tiap_loader \
+    tiap_cu \
+    tiwlan_ap.ini \
+    hostap \
+    hostapd.conf
+
 PRODUCT_COPY_FILES += \
     device/htc/espresso/vold.fstab:system/etc/vold.fstab \
     vendor/cyanogen/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
@@ -139,7 +151,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/espresso/prebuilt/sdio.ko:/system/lib/modules/sdio.ko \
     device/htc/espresso/prebuilt/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
-	device/htc/espresso/prebuilt/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
+    device/htc/espresso/prebuilt/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
     device/htc/espresso/prebuilt/cifs.ko:/system/lib/modules/cifs.ko
 
 # media profiles and capabilities spec

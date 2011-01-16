@@ -39,6 +39,9 @@ on boot
     # for playing streaming
     chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
+    # Copying hostapd.conf (WLAN HotSpot)
+    copy /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
+    chown wifi wifi /data/misc/wifi
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
@@ -58,6 +61,17 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     oneshot
 
 service dhcpcd /system/bin/dhcpcd -ABKL tiwlan0
+    disabled
+    oneshot
+
+# HotSpot Related services
+service wlan_ap_loader /system/bin/tiap_loader \
+    -f /system/etc/wifi/Fw1273_CHIP_AP.bin \
+    -i /system/etc/wifi/softap/tiwlan_ap.ini
+    disabled
+    oneshot
+
+service hostapd /system/bin/hostap -dd /data/misc/wifi/hostapd.conf
     disabled
     oneshot
 

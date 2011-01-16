@@ -47,6 +47,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WLAN_DEVICE           := wl1271
+BOARD_SOFTAP_DEVICE         := wl1271
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
 WIFI_DRIVER_MODULE_ARG      := ""
