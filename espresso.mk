@@ -107,7 +107,16 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     copybit.msm7k \
     sensors.latte \
-    gps.liberty
+    gps.latte
+
+# WiFi stuff
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf \
+    tiwlan.ini \
+    dhcpcd.conf \
+    wlan_cu \
+    wlan_loader \
+    libCustomWifi
 
 PRODUCT_COPY_FILES += \
     device/htc/espresso/vold.fstab:system/etc/vold.fstab \
