@@ -79,6 +79,8 @@ BOARD_USE_FROYO_LIBCAMERA := true
 
 BOARD_USES_GPSSHIM:=true
 
+BOARD_GPS_LIBRARIES := libgps
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
