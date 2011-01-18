@@ -99,9 +99,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x01920000
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_espresso librecovery_ui_generic
-
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/espresso/prebuilt/kernel
 LOCAL_KERNEL := device/htc/espresso/prebuilt/kernel
