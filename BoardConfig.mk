@@ -81,6 +81,9 @@ BOARD_USES_GPSSHIM:=true
 
 BOARD_GPS_LIBRARIES := libgps
 
+BOARD_USE_KINETO_COMPATIBILITY := true
+BOARD_USE_NEW_LIBRIL_HTC := true
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 000a0000 00020000 "misc"
