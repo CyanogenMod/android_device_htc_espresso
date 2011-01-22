@@ -43,6 +43,9 @@ on boot
     copy /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
     chown wifi wifi /data/misc/wifi
 
+    # For Kineto GAN
+    insmod /system/lib/modules/gan-eth.ko
+
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
