@@ -43,14 +43,20 @@ PRODUCT_COPY_FILES += \
 
 # GSM Overrides
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libhtc_ril.so \
+    rild.libpath=/system/lib/librilswitch.so \
+    rilswitch.vendorlibpath=/system/lib/libhtc_ril.so \
+    rilswitch.ganlibpath=/system/lib/libganril.so \
     ro.ril.gprsclass = 10 \
     ro.ril.hsxpa=2 \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
     wifi.interface = tiwlan0 \
     wifi.supplicant_scan_interval = 15 \
     ro.sf.lcd_density = 160 \
-    ro.opengles.version=131072
+    ro.opengles.version=131072 \
+    ro.ril.enable.dtm=0 \
+    ro.ril.hsdpa.category=8 \
+    ro.ril.hsupa.category=5 \
+    mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -60,10 +66,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # For the agps default value
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.def.agps.mode = 2 
-
-# For 7227 projects, default enable AMR-Wideband
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ril.enable.amr.wideband = 1
 
 # For emmc phone storage
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -88,8 +90,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
     ro.setupwizard.enable_bypass=1 \
-    ro.media.dec.aud.wma.enabled=1 \
-    ro.media.dec.vid.wmv.enabled=1 \
     dalvik.vm.dexopt-flags=m=y
 
 # Capabilities
@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
     device/htc/espresso/gps.conf:system/etc/gps.conf
+
+# Backwards compatible libcrypto
+PRODUCT_COPY_FILES += \
+    device/htc/espresso/prebuilt/libcryp98.so:system/lib/libcryp98.so
 
 # Kernel Target
 ifeq ($(TARGET_PREBUILT_KERNEL),)
