@@ -46,6 +46,11 @@ on boot
     # For Kineto GAN
     insmod /system/lib/modules/gan-eth.ko
 
+    # performance tweaks for flash
+    write /sys/block/mtdblock3/bdi/read_ahead_kb 4
+    write /sys/block/mtdblock4/bdi/read_ahead_kb 4
+    write /sys/block/mtdblock5/bdi/read_ahead_kb 4
+
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
