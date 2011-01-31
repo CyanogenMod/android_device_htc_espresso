@@ -156,7 +156,6 @@ PRODUCT_COPY_FILES += \
     device/htc/espresso/prebuilt/sdio.ko:/system/lib/modules/sdio.ko \
     device/htc/espresso/prebuilt/tiwlan_drv.ko:/system/lib/modules/tiwlan_drv.ko \
     device/htc/espresso/prebuilt/tiap_drv.ko:/system/lib/modules/tiap_drv.ko \
-    device/htc/espresso/prebuilt/cifs.ko:/system/lib/modules/cifs.ko \
     device/htc/espresso/prebuilt/gan-eth.ko:/system/lib/modules/gan-eth.ko
 
 # media profiles and capabilities spec
