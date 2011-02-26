@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="has_menu_button">true</bool>
+    <bool name="has_trackball">true</bool>
+    <bool name="has_camera_button">true</bool>
+</resources>
