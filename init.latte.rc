@@ -72,6 +72,10 @@ service dhcpcd_tiwlan0 /system/bin/dhcpcd -ABKL tiwlan0
     disabled
     oneshot
 
+service iprenew_tiwlan0 /system/bin/dhcpcd -n
+    disabled
+    oneshot
+
 # HotSpot Related services
 service wlan_ap_loader /system/bin/tiap_loader \
     -f /system/etc/wifi/Fw1273_CHIP_AP.bin \
