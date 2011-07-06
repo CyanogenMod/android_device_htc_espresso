@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     device/htc/espresso/keychars/latte-keypad-v2.kcm.bin:system/usr/keychars/latte-keypad-v2.kcm.bin \
     device/htc/espresso/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
     device/htc/espresso/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
+    device/htc/espresso/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/espresso/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 PRODUCT_COPY_FILES += \
