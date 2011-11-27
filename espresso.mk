@@ -76,9 +76,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m
 
-# Enable TI HotSpot
+# Enable custom HotSpot
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.hotspot.ti=1
+    wifi.hotspot.custom=1
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/espresso/espresso-vendor.mk)
