@@ -55,6 +55,9 @@ WIFI_DRIVER_MODULE_NAME     := "tiwlan_drv"
 WIFI_EXT_MODULE_PATH        := "/system/lib/modules/sdio.ko"
 WIFI_EXT_MODULE_NAME        := "sdio"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
+WIFI_AP_DRIVER_MODULE_NAME  := "tiwlan_drv"
+WIFI_AP_DRIVER_MODULE_PATH  := "/system/lib/modules/tiwlan_drv.ko"
+WIFI_AP_FIRMWARE_LOADER     := "wlan_ap_loader"
 
 BOARD_USES_GENERIC_AUDIO := false
 
